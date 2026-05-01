@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azyl Shop - Cennik i Skup</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@1,900&display=swap');
+        
+        body {
+            background-color: #0a0a0a;
+            font-family: 'Inter', sans-serif;
+            color: white;
+            scroll-behavior: smooth;
+        }
+
+        .hero-font {
+            font-style: italic;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        .section-card {
+            background-color: #111111;
+            border-radius: 40px;
+            border: 1px solid #1f2937;
+            transition: all 0.3s ease;
+        }
+
+        .section-card:hover {
+            border-color: #22c55e;
+        }
+
+        .btn-toxic { background-color: #22c55e; color: #000; border-radius: 40px; transition: transform 0.2s; }
+        .btn-toxic:hover { transform: scale(1.05); }
+
+        .btn-dark { background-color: #166534; color: #fff; border-radius: 40px; }
+        
+        .method-item {
+            border-left: 4px solid #22c55e;
+            background: rgba(255,255,255,0.02);
+            padding: 10px 20px;
+            border-radius: 0 15px 15px 0;
+            font-size: 0.875rem;
+        }
+
+        .online-dot {
+            width: 8px; height: 8px;
+            background-color: #4ade80;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 6px;
+            box-shadow: 0 0 10px #22c55e;
+        }
+
+        .logo-circle {
+            border-radius: 50%;
+            border: 2px solid #22c55e;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="p-0 m-0">
+
+    <!-- NAVBAR -->
+    <nav class="flex justify-center items-center gap-10 py-8 sticky top-0 bg-[#0a0a0a]/80 backdrop-blur-md z-50">
+        <a href="#sklep" class="font-black text-xs uppercase hover:text-[#22c55e]">Główna</a>
+        <a href="#cennik" class="font-black text-xs uppercase hover:text-[#22c55e]">Cennik</a>
+        <div class="flex flex-col items-center">
+            <img src="Gemini_Generated_Image_876z9z876z9z876z.jpg" alt="Azyl Logo" class="w-12 h-12 logo-circle">
+        </div>
+        <a href="#skup" class="font-black text-xs uppercase hover:text-[#22c55e]">Skup</a>
+        <a href="#regulamin" class="font-black text-xs uppercase hover:text-[#22c55e]">Regulamin</a>
+    </nav>
+
+    <main class="max-w-[1200px] mx-auto px-6">
+        
+        <!-- 1. HERO SECTION -->
+        <div id="sklep" class="flex flex-col lg:flex-row gap-5 mb-20 pt-10">
+            <div class="section-card flex-[1.8] p-16 flex flex-col items-center justify-center min-h-[450px] relative overflow-hidden text-center">
+                <img src="Gemini_Generated_Image_876z9z876z9z876z.jpg" alt="Azyl Logo" class="w-32 h-32 mb-8 z-10 logo-circle">
+                <h1 class="text-white text-7xl md:text-8xl hero-font tracking-tighter z-10 leading-none">
+                    AZYL <span class="text-[#22c55e]">SHOP</span>
+                </h1>
+                <div class="absolute w-64 h-64 bg-[#22c55e] opacity-10 blur-[100px] rounded-full"></div>
+            </div>
+
+            <div class="flex-1 flex flex-col gap-5">
+                <a href="#cennik" class="btn-toxic h-full flex items-center justify-center py-10 px-5 text-center">
+                    <span class="hero-font text-3xl">Cennik</span>
+                </a>
+                <a href="https://discord.gg/8gxUEXTGyU" target="_blank" class="btn-dark h-full flex flex-col items-center justify-center py-10 px-5 text-center">
+                    <span class="hero-font text-2xl italic">Discord</span>
+                    <div class="mt-2 font-bold text-[10px] uppercase opacity-70 tracking-widest flex items-center">
+                        <span class="online-dot"></span> <span id="online-count">...</span> Online
+                    </div>
+                </a>
+                <a href="https://guns.lol/m1czzzzz" target="_blank" class="border-2 border-[#22c55e] text-[#22c55e] rounded-[40px] h-full flex items-center justify-center py-10 px-5">
+                    <span class="hero-font text-2xl">Social Media</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- 2. CENNIK (STRYCHAMC) -->
+        <div id="cennik" class="mb-20 scroll-mt-24">
+            <div class="flex items-center justify-center gap-4 mb-8">
+                <img src="gfff_3.jpg" alt="Strycha Icon" class="w-12 h-12 object-contain">
+                <h2 class="hero-font text-4xl text-center text-[#22c55e]">Cennik StrychaMC</h2>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div class="section-card p-10 flex flex-col items-center">
+                    <img src="gfff_3.jpg" alt="StrychaMC" class="w-48 mb-8 drop-shadow-[0_0_20px_rgba(251,191,36,0.2)]">
+                    <div class="w-full space-y-4 font-black italic">
+                        <div class="bg-white/5 p-4 rounded-2xl flex justify-between items-center border-l-4 border-yellow-500">
+                            <span>1 ZŁ</span> <span class="text-[#22c55e] text-xl">3,5K</span>
+                        </div>
+                        <div class="bg-white/5 p-4 rounded-2xl flex justify-between items-center border-l-4 border-yellow-500 text-sm">
+                            <span>DRIPSTONE (30x30)</span> <span class="text-[#22c55e]">40K</span>
+                        </div>
+                        <div class="bg-white/5 p-4 rounded-2xl flex justify-between items-center border-l-4 border-yellow-500 text-sm">
+                            <span>FARMA PICKLI</span> <span class="text-[#22c55e]">25K</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-card p-10">
+                    <h3 class="hero-font text-xl mb-6">Metody Płatności</h3>
+                    <div class="space-y-3 font-bold italic">
+                        <div class="method-item flex justify-between"><span>BLIK (PRZELEW)</span> <span>0%</span></div>
+                        <div class="method-item flex justify-between"><span>BLIK (KOD)</span> <span>5%</span></div>
+                        <div class="method-item flex justify-between"><span>PSC (PARAGON)</span> <span>15%</span></div>
+                        <div class="method-item flex justify-between"><span>PSC (BEZ PARAGONU)</span> <span>20%</span></div>
+                    </div>
+                    <p class="mt-6 text-center text-xs text-red-500 hero-font">Min. wypłata 5 PLN</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. SKUP (STRYCHA & ANARCHIA) -->
+        <div id="skup" class="mb-20 scroll-mt-24">
+            <h2 class="hero-font text-4xl mb-8 text-center text-[#22c55e]">Skup Itemów</h2>
+            <div class="grid md:grid-cols-2 gap-8 font-black italic">
+                <!-- Skup StrychaMC -->
+                <div class="section-card p-8">
+                    <div class="flex items-center gap-4 mb-6 border-b border-white/10 pb-4">
+                        <img src="gfff_3.jpg" alt="Strycha Icon" class="w-10 h-10 object-contain">
+                        <h3 class="hero-font text-xl">Skup StrychaMC</h3>
+                    </div>
+                    <div class="space-y-4 text-sm">
+                        <div class="flex justify-between items-center bg-white/5 p-4 rounded-xl">
+                            <span>6K</span> <span class="text-[#22c55e]">1 ZŁ</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-white/5 p-4 rounded-xl">
+                            <span class="uppercase">10K w itemach (serca itp)</span> <span class="text-[#22c55e]">1 ZŁ</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Skup Anarchia.gg -->
+                <div class="section-card p-8">
+                    <div class="flex items-center gap-4 mb-6 border-b border-white/10 pb-4">
+                        <img src="19224206-anarchiagg_l.webp" alt="Anarchia Icon" class="w-10 h-10 object-contain">
+                        <h3 class="hero-font text-xl">Skup Anarchia.gg</h3>
+                    </div>
+                    <div class="space-y-4 text-sm">
+                        <div class="flex justify-between items-center bg-white/5 p-4 rounded-xl">
+                            <span>10K</span> <span class="text-[#22c55e]">1 ZŁ</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-white/5 p-4 rounded-xl">
+                            <span class="uppercase">15K w itemach</span> <span class="text-[#22c55e]">1 ZŁ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. REGULAMIN AZYL -->
+        <div id="regulamin" class="mb-20 scroll-mt-24">
+            <h2 class="hero-font text-4xl mb-8 text-center text-[#22c55e]">Regulamin Azyl</h2>
+            <div class="space-y-3 font-bold italic text-sm">
+                <div class="bg-white/5 p-5 rounded-2xl border-l-4 border-[#22c55e]">
+                    1. Regulamin w każdym momencie może ulec zmianie i nie mam obowiązku informowania każdego o tym
+                </div>
+                <div class="bg-white/5 p-5 rounded-2xl border-l-4 border-[#22c55e]">
+                    2. Ping rang wyższych niż @nieznana rola skutkuje przerwą 1 dzień, jeżeli sprawa nie jest ważna
+                </div>
+                <div class="bg-white/5 p-5 rounded-2xl border-l-4 border-[#22c55e]">
+                    3. Reklamowanie się, bądź innych serwerów discord bez mojej wiedzy będzie skutkować perm banem
+                </div>
+                <div class="bg-white/5 p-5 rounded-2xl border-l-4 border-[#22c55e]">
+                    4. Działanie na niekorzyść serwera skutkuje perm banem
+                </div>
+                <div class="bg-white/5 p-5 rounded-2xl border-l-4 border-[#22c55e]">
+                    5. Marnowanie mojego czasu będzie podlegało karze
+                </div>
+                <div class="bg-white/5 p-5 rounded-2xl border-l-4 border-[#22c55e]">
+                    6. Bycie zjebem = ban / mute 7 d
+                </div>
+                <div class="bg-white/5 p-5 rounded-2xl border-l-4 border-[#22c55e]">
+                    7. Karę mogę nadać również za coś czego nie ma w regulaminie
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="py-12 border-t border-white/5 text-center text-gray-700 font-black uppercase text-[10px] tracking-[0.5em]">
+        Azyl Shop 2026 • Cennik, Skup & Regulamin
+    </footer>
+
+    <script>
+        async function updateDiscordCount() {
+            try {
+                const response = await fetch(`https://discord.com/api/guilds/1231652159800184914/widget.json`);
+                const data = await response.json();
+                if (data.presence_count !== undefined) document.getElementById('online-count').innerText = data.presence_count;
+            } catch (e) { document.getElementById('online-count').innerText = "0"; }
+        }
+        updateDiscordCount();
+        setInterval(updateDiscordCount, 30000);
+    </script>
+</body>
+</html>
