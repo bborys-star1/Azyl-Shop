@@ -35,9 +35,9 @@
         .btn-toxic { background-color: #22c55e; color: #000; border-radius: 40px; transition: transform 0.2s; }
         .btn-toxic:hover { transform: scale(1.05); }
 
-        /* ANIMACJA DLA DISCORD I SOCIAL MEDIA */
+        /* ANIMACJA PULSOWANIA DLA DISCORD I SOCIAL MEDIA */
         @keyframes pulse-glow {
-            0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); }
+            0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5); }
             70% { box-shadow: 0 0 0 15px rgba(34, 197, 94, 0); }
             100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
         }
@@ -77,7 +77,9 @@
     <nav class="flex justify-center items-center gap-10 py-8 sticky top-0 bg-[#0a0a0a]/80 backdrop-blur-md z-50">
         <a href="#sklep" class="font-black text-xs uppercase hover:text-[#22c55e]">Główna</a>
         <a href="#cennik" class="font-black text-xs uppercase hover:text-[#22c55e]">Cennik</a>
-        <span class="text-[#22c55e] font-black italic">AZYL</span>
+        <div class="flex flex-col items-center">
+            <span class="text-[#22c55e] font-black italic text-xl tracking-tighter">AZYL</span>
+        </div>
         <a href="#skup" class="font-black text-xs uppercase hover:text-[#22c55e]">Skup</a>
         <a href="#regulamin" class="font-black text-xs uppercase hover:text-[#22c55e]">Regulamin</a>
     </nav>
@@ -97,27 +99,27 @@
                 <a href="#cennik" class="btn-toxic h-full flex items-center justify-center py-10 px-5 text-center">
                     <span class="hero-font text-3xl">Cennik</span>
                 </a>
-                <!-- PRZYCISK DISCORD Z ANIMACJĄ -->
+                
+                <!-- ANIMOWANY PRZYCISK DISCORD -->
                 <a href="https://discord.gg/8gxUEXTGyU" target="_blank" class="btn-dark h-full flex flex-col items-center justify-center py-10 px-5 text-center animate-glow">
                     <span class="hero-font text-2xl italic">Discord</span>
                     <div class="mt-2 font-bold text-[10px] uppercase opacity-70 tracking-widest flex items-center">
                         <span class="online-dot"></span> <span id="online-count">...</span> Online
                     </div>
                 </a>
-                <!-- PRZYCISK SOCIAL MEDIA Z ANIMACJĄ -->
+
+                <!-- ANIMOWANY PRZYCISK SOCIAL MEDIA -->
                 <a href="https://guns.lol/m1czzzzz" target="_blank" class="border-2 border-[#22c55e] text-[#22c55e] rounded-[40px] h-full flex items-center justify-center py-10 px-5 animate-glow" style="animation-delay: 0.5s;">
                     <span class="hero-font text-2xl">Social Media</span>
                 </a>
             </div>
         </div>
 
-        <!-- 2. CENNIK STRYCHAMC -->
+        <!-- 2. CENNIK -->
         <div id="cennik" class="mb-20 scroll-mt-24">
-            <div class="flex items-center justify-center gap-4 mb-8">
-                <h2 class="hero-font text-4xl text-center text-[#22c55e]">Cennik StrychaMC</h2>
-            </div>
+            <h2 class="hero-font text-4xl mb-8 text-center text-[#22c55e]">Cennik StrychaMC</h2>
             <div class="grid lg:grid-cols-2 gap-8">
-                <div class="section-card p-10 flex flex-col items-center">
+                <div class="section-card p-10 flex flex-col items-center justify-center">
                     <div class="w-full space-y-4 font-black italic text-sm">
                         <div class="bg-white/5 p-4 rounded-2xl flex justify-between items-center border-l-4 border-yellow-500">
                             <span>1 ZŁ</span> <span class="text-[#22c55e] text-xl">3,5K</span>
@@ -138,38 +140,33 @@
                         <div class="method-item flex justify-between"><span>PSC (PARAGON)</span> <span>15%</span></div>
                         <div class="method-item flex justify-between"><span>PSC (BEZ PARAGONU)</span> <span>20%</span></div>
                     </div>
-                    <p class="mt-6 text-center text-xs text-red-500 hero-font">Min. wypłata 5 PLN</p>
                 </div>
             </div>
         </div>
 
-        <!-- 3. SKUP ITEMÓW -->
+        <!-- 3. SKUP -->
         <div id="skup" class="mb-20 scroll-mt-24">
             <h2 class="hero-font text-4xl mb-8 text-center text-[#22c55e]">Skup Itemów</h2>
             <div class="grid md:grid-cols-2 gap-8 font-black italic">
                 <div class="section-card p-8">
-                    <div class="flex items-center gap-4 mb-6 border-b border-white/10 pb-4">
-                        <h3 class="hero-font text-xl">Skup StrychaMC</h3>
-                    </div>
+                    <h3 class="hero-font text-xl mb-6 border-b border-white/10 pb-2">StrychaMC</h3>
                     <div class="space-y-4 text-sm">
                         <div class="flex justify-between items-center bg-white/5 p-4 rounded-xl">
                             <span>6K</span> <span class="text-[#22c55e]">1 ZŁ</span>
                         </div>
-                        <div class="flex justify-between items-center bg-white/5 p-4 rounded-xl">
-                            <span class="uppercase">10K w itemach (serca itp)</span> <span class="text-[#22c55e]">1 ZŁ</span>
+                        <div class="flex justify-between items-center bg-white/5 p-4 rounded-xl uppercase">
+                            <span>10K w itemach</span> <span class="text-[#22c55e]">1 ZŁ</span>
                         </div>
                     </div>
                 </div>
                 <div class="section-card p-8">
-                    <div class="flex items-center gap-4 mb-6 border-b border-white/10 pb-4">
-                        <h3 class="hero-font text-xl">Skup Anarchia.gg</h3>
-                    </div>
+                    <h3 class="hero-font text-xl mb-6 border-b border-white/10 pb-2">Anarchia.gg</h3>
                     <div class="space-y-4 text-sm">
                         <div class="flex justify-between items-center bg-white/5 p-4 rounded-xl">
                             <span>10K</span> <span class="text-[#22c55e]">1 ZŁ</span>
                         </div>
-                        <div class="flex justify-between items-center bg-white/5 p-4 rounded-xl">
-                            <span class="uppercase">15K w itemach</span> <span class="text-[#22c55e]">1 ZŁ</span>
+                        <div class="flex justify-between items-center bg-white/5 p-4 rounded-xl uppercase">
+                            <span>15K w itemach</span> <span class="text-[#22c55e]">1 ZŁ</span>
                         </div>
                     </div>
                 </div>
@@ -178,22 +175,21 @@
 
         <!-- 4. REGULAMIN -->
         <div id="regulamin" class="mb-20 scroll-mt-24">
-            <h2 class="hero-font text-4xl mb-8 text-center text-[#22c55e]">Regulamin Azyl</h2>
+            <h2 class="hero-font text-4xl mb-8 text-center text-[#22c55e]">Regulamin</h2>
             <div class="space-y-3 font-bold italic text-sm">
-                <div class="bg-white/5 p-5 rounded-2xl border-l-4 border-[#22c55e]">1. Regulamin w każdym momencie może ulec zmianie...</div>
-                <div class="bg-white/5 p-5 rounded-2xl border-l-4 border-[#22c55e]">2. Ping rang wyższych niż @nieznana rola skutkuje przerwą 1 dzień...</div>
-                <div class="bg-white/5 p-5 rounded-2xl border-l-4 border-[#22c55e]">3. Reklamowanie się bez mojej wiedzy = perm ban</div>
-                <div class="bg-white/5 p-5 rounded-2xl border-l-4 border-[#22c55e]">4. Działanie na niekorzyść serwera = perm ban</div>
-                <div class="bg-white/5 p-5 rounded-2xl border-l-4 border-[#22c55e]">5. Marnowanie mojego czasu będzie karane</div>
-                <div class="bg-white/5 p-5 rounded-2xl border-l-4 border-[#22c55e]">6. Bycie zjebem = ban / mute 7 d</div>
-                <div class="bg-white/5 p-5 rounded-2xl border-l-4 border-[#22c55e]">7. Karę mogę nadać również za coś czego nie ma w regulaminie</div>
+                <div class="bg-white/5 p-5 rounded-2xl border-l-4 border-[#22c55e]">1. Regulamin może ulec zmianie bez uprzedzenia.</div>
+                <div class="bg-white/5 p-5 rounded-2xl border-l-4 border-[#22c55e]">2. Zbędne oznaczanie administracji = przerwa 1 dzień.</div>
+                <div class="bg-white/5 p-5 rounded-2xl border-l-4 border-[#22c55e]">3. Reklamowanie bez zgody = perm ban.</div>
+                <div class="bg-white/5 p-5 rounded-2xl border-l-4 border-[#22c55e]">4. Działanie na niekorzyść serwera = perm ban.</div>
+                <div class="bg-white/5 p-5 rounded-2xl border-l-4 border-[#22c55e]">5. Marnowanie czasu administracji podlega karze.</div>
+                <div class="bg-white/5 p-5 rounded-2xl border-l-4 border-[#22c55e]">6. Brak kultury = ban/mute 7 dni.</div>
+                <div class="bg-white/5 p-5 rounded-2xl border-l-4 border-[#22c55e]">7. Administracja ma prawo nadać karę poza regulaminem.</div>
             </div>
         </div>
-
     </main>
 
     <footer class="py-12 border-t border-white/5 text-center text-gray-700 font-black uppercase text-[10px] tracking-[0.5em]">
-        Azyl Shop 2026 • Cennik, Skup & Regulamin
+        Azyl Shop 2026
     </footer>
 
     <script>
