@@ -35,7 +35,23 @@
         .btn-toxic { background-color: #22c55e; color: #000; border-radius: 40px; transition: transform 0.2s; }
         .btn-toxic:hover { transform: scale(1.05); }
 
-        .btn-dark { background-color: #166534; color: #fff; border-radius: 40px; }
+        /* ANIMACJA DLA DISCORD I SOCIAL MEDIA */
+        @keyframes pulse-glow {
+            0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(34, 197, 94, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+        }
+
+        .animate-glow {
+            animation: pulse-glow 2s infinite;
+        }
+
+        .btn-dark { 
+            background-color: #166534; 
+            color: #fff; 
+            border-radius: 40px; 
+            transition: all 0.3s;
+        }
         
         .method-item {
             border-left: 4px solid #22c55e;
@@ -53,12 +69,6 @@
             margin-right: 6px;
             box-shadow: 0 0 10px #22c55e;
         }
-
-        .logo-circle {
-            border-radius: 50%;
-            border: 2px solid #22c55e;
-            object-fit: cover;
-        }
     </style>
 </head>
 <body class="p-0 m-0">
@@ -67,10 +77,7 @@
     <nav class="flex justify-center items-center gap-10 py-8 sticky top-0 bg-[#0a0a0a]/80 backdrop-blur-md z-50">
         <a href="#sklep" class="font-black text-xs uppercase hover:text-[#22c55e]">Główna</a>
         <a href="#cennik" class="font-black text-xs uppercase hover:text-[#22c55e]">Cennik</a>
-        <div class="flex flex-col items-center">
-            <!-- POPRAWIONA NAZWA: AzylShop.png -->
-            <img src="AzylShop.png" alt="Azyl Logo" class="w-12 h-12 logo-circle">
-        </div>
+        <span class="text-[#22c55e] font-black italic">AZYL</span>
         <a href="#skup" class="font-black text-xs uppercase hover:text-[#22c55e]">Skup</a>
         <a href="#regulamin" class="font-black text-xs uppercase hover:text-[#22c55e]">Regulamin</a>
     </nav>
@@ -80,8 +87,6 @@
         <!-- 1. HERO SECTION -->
         <div id="sklep" class="flex flex-col lg:flex-row gap-5 mb-20 pt-10">
             <div class="section-card flex-[1.8] p-16 flex flex-col items-center justify-center min-h-[450px] relative overflow-hidden text-center">
-                <!-- POPRAWIONA NAZWA: AzylShop.png -->
-                <img src="AzylShop.png" alt="Azyl Logo" class="w-32 h-32 mb-8 z-10 logo-circle">
                 <h1 class="text-white text-7xl md:text-8xl hero-font tracking-tighter z-10 leading-none">
                     AZYL <span class="text-[#22c55e]">SHOP</span>
                 </h1>
@@ -92,13 +97,15 @@
                 <a href="#cennik" class="btn-toxic h-full flex items-center justify-center py-10 px-5 text-center">
                     <span class="hero-font text-3xl">Cennik</span>
                 </a>
-                <a href="https://discord.gg/8gxUEXTGyU" target="_blank" class="btn-dark h-full flex flex-col items-center justify-center py-10 px-5 text-center">
+                <!-- PRZYCISK DISCORD Z ANIMACJĄ -->
+                <a href="https://discord.gg/8gxUEXTGyU" target="_blank" class="btn-dark h-full flex flex-col items-center justify-center py-10 px-5 text-center animate-glow">
                     <span class="hero-font text-2xl italic">Discord</span>
                     <div class="mt-2 font-bold text-[10px] uppercase opacity-70 tracking-widest flex items-center">
                         <span class="online-dot"></span> <span id="online-count">...</span> Online
                     </div>
                 </a>
-                <a href="https://guns.lol/m1czzzzz" target="_blank" class="border-2 border-[#22c55e] text-[#22c55e] rounded-[40px] h-full flex items-center justify-center py-10 px-5">
+                <!-- PRZYCISK SOCIAL MEDIA Z ANIMACJĄ -->
+                <a href="https://guns.lol/m1czzzzz" target="_blank" class="border-2 border-[#22c55e] text-[#22c55e] rounded-[40px] h-full flex items-center justify-center py-10 px-5 animate-glow" style="animation-delay: 0.5s;">
                     <span class="hero-font text-2xl">Social Media</span>
                 </a>
             </div>
@@ -107,14 +114,10 @@
         <!-- 2. CENNIK STRYCHAMC -->
         <div id="cennik" class="mb-20 scroll-mt-24">
             <div class="flex items-center justify-center gap-4 mb-8">
-                <!-- POPRAWIONA NAZWA: StrychaMc.png -->
-                <img src="StrychaMc.png" alt="Strycha Icon" class="w-12 h-12 object-contain">
                 <h2 class="hero-font text-4xl text-center text-[#22c55e]">Cennik StrychaMC</h2>
             </div>
             <div class="grid lg:grid-cols-2 gap-8">
                 <div class="section-card p-10 flex flex-col items-center">
-                    <!-- POPRAWIONA NAZWA: StrychaMc.png -->
-                    <img src="StrychaMc.png" alt="Strycha Logo" class="w-48 mb-8 drop-shadow-[0_0_20px_rgba(251,191,36,0.2)]">
                     <div class="w-full space-y-4 font-black italic text-sm">
                         <div class="bg-white/5 p-4 rounded-2xl flex justify-between items-center border-l-4 border-yellow-500">
                             <span>1 ZŁ</span> <span class="text-[#22c55e] text-xl">3,5K</span>
@@ -144,11 +147,8 @@
         <div id="skup" class="mb-20 scroll-mt-24">
             <h2 class="hero-font text-4xl mb-8 text-center text-[#22c55e]">Skup Itemów</h2>
             <div class="grid md:grid-cols-2 gap-8 font-black italic">
-                <!-- Skup StrychaMC -->
                 <div class="section-card p-8">
                     <div class="flex items-center gap-4 mb-6 border-b border-white/10 pb-4">
-                        <!-- POPRAWIONA NAZWA: StrychaMc.png -->
-                        <img src="StrychaMc.png" alt="Strycha Icon" class="w-10 h-10 object-contain">
                         <h3 class="hero-font text-xl">Skup StrychaMC</h3>
                     </div>
                     <div class="space-y-4 text-sm">
@@ -160,10 +160,8 @@
                         </div>
                     </div>
                 </div>
-                <!-- Skup Anarchia.gg -->
                 <div class="section-card p-8">
                     <div class="flex items-center gap-4 mb-6 border-b border-white/10 pb-4">
-                        <img src="19224206-anarchiagg_l.webp" alt="Anarchia Icon" class="w-10 h-10 object-contain">
                         <h3 class="hero-font text-xl">Skup Anarchia.gg</h3>
                     </div>
                     <div class="space-y-4 text-sm">
@@ -182,27 +180,13 @@
         <div id="regulamin" class="mb-20 scroll-mt-24">
             <h2 class="hero-font text-4xl mb-8 text-center text-[#22c55e]">Regulamin Azyl</h2>
             <div class="space-y-3 font-bold italic text-sm">
-                <div class="bg-white/5 p-5 rounded-2xl border-l-4 border-[#22c55e]">
-                    1. Regulamin w każdym momencie może ulec zmianie i nie mam obowiązku informowania każdego o tym
-                </div>
-                <div class="bg-white/5 p-5 rounded-2xl border-l-4 border-[#22c55e]">
-                    2. Ping rang wyższych niż @nieznana rola skutkuje przerwą 1 dzień, jeżeli sprawa nie jest ważna
-                </div>
-                <div class="bg-white/5 p-5 rounded-2xl border-l-4 border-[#22c55e]">
-                    3. Reklamowanie się, bądź innych serwerów discord bez mojej wiedzy będzie skutkować perm banem
-                </div>
-                <div class="bg-white/5 p-5 rounded-2xl border-l-4 border-[#22c55e]">
-                    4. Działanie na niekorzyść serwera skutkuje perm banem
-                </div>
-                <div class="bg-white/5 p-5 rounded-2xl border-l-4 border-[#22c55e]">
-                    5. Marnowanie mojego czasu będzie podlegało karze
-                </div>
-                <div class="bg-white/5 p-5 rounded-2xl border-l-4 border-[#22c55e]">
-                    6. Bycie zjebem = ban / mute 7 d
-                </div>
-                <div class="bg-white/5 p-5 rounded-2xl border-l-4 border-[#22c55e]">
-                    7. Karę mogę nadać również za coś czego nie ma w regulaminie
-                </div>
+                <div class="bg-white/5 p-5 rounded-2xl border-l-4 border-[#22c55e]">1. Regulamin w każdym momencie może ulec zmianie...</div>
+                <div class="bg-white/5 p-5 rounded-2xl border-l-4 border-[#22c55e]">2. Ping rang wyższych niż @nieznana rola skutkuje przerwą 1 dzień...</div>
+                <div class="bg-white/5 p-5 rounded-2xl border-l-4 border-[#22c55e]">3. Reklamowanie się bez mojej wiedzy = perm ban</div>
+                <div class="bg-white/5 p-5 rounded-2xl border-l-4 border-[#22c55e]">4. Działanie na niekorzyść serwera = perm ban</div>
+                <div class="bg-white/5 p-5 rounded-2xl border-l-4 border-[#22c55e]">5. Marnowanie mojego czasu będzie karane</div>
+                <div class="bg-white/5 p-5 rounded-2xl border-l-4 border-[#22c55e]">6. Bycie zjebem = ban / mute 7 d</div>
+                <div class="bg-white/5 p-5 rounded-2xl border-l-4 border-[#22c55e]">7. Karę mogę nadać również za coś czego nie ma w regulaminie</div>
             </div>
         </div>
 
